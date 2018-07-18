@@ -1,0 +1,17 @@
+langcode: es
+status: true
+dependencies:
+  theme:
+    - real
+id: real_local_actions
+theme: real
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones primarias de administración'
+  provider: core
+  label_display: '0'
+visibility: {  }

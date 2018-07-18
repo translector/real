@@ -1,0 +1,19 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - real
+id: real_messages
+theme: real
+region: messages
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  provider: system
+  label_display: '0'
+visibility: {  }

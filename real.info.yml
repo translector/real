@@ -1,0 +1,27 @@
+name: Drupal Eight real Theme
+type: theme
+description: 'real Drupal 8 Responsive Theme. Developed & Designed by https://realmedianetwork.com'
+package: core
+version: '8.x-1.0'
+core: '8.x'
+
+#Libraries
+libraries:
+  - real/bootstrap
+  - real/global-components
+  - real/fonts
+
+#Regions
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  menu: 'Menu'
+  banner: 'Banner'
+  messages: 'Messages'
+  slider: 'Slider'
+  page_title: 'Page Title'
+  content: 'Content'
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
+  footer: 'Footer'
+  auto_hidden_block: 'Auto hidden blocks'

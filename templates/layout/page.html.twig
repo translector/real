@@ -1,0 +1,105 @@
+<div class="navbar-dark" style="background-color: #333031;">
+  <nav class="navbar">
+      <a a href="/" class="navbar-brand"><img class="logo" src="{{ base_path ~ directory }}/logo.jpg" alt="Inicio" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <div class="men">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <div class="mena">
+                <h1>Real Media Network</h1>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="menb">
+                <ul class="navbar-nav mr-auto">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="{{ url('<front>') }}productos">Productos</a></li>
+                  <li><a href="{{ url('<front>') }}soluciones">Soluciones</a></li>
+                  <li><a href="{{ url('<front>') }}casos">Casos de éxito</a></li>
+                  <li><a href="{{ url('<front>') }}clientes">Clientes</a></li>
+                  <li><a href="{{ url('<front>') }}contacto">Contáctanos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<header class="main-header">
+
+  <!-- Start: Banner -->
+    {% if page.banner %}
+      <div class="container">
+        <div class="banner">
+          <div class="row">
+            <div class="col-md-12">
+              {{ page.banner }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  <!-- End: Banner -->
+
+  <!--- Start Messages -->
+    {% if page.messages %}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              {{ page.messages }}
+            </div>
+          </div>
+      </div>
+    {% endif %}
+  <!---End Messages -->
+
+
+</header>
+
+  <!-- start container -->
+  <div class="container content">
+    <div class="row">
+
+      <!--- Start Left SideBar -->
+      {% if page.sidebar_first %}
+          <div class = {{sidebarfirst}} >
+            {{ page.sidebar_first }}
+          </div>
+      {% endif %}
+      <!---End Right SideBar -->
+
+      <!--- Start content -->
+      {% if page.content %}
+          <div class={{contentlayout}}>
+            {{ page.content }}
+          </div>
+      {% endif %}
+      <!---End content -->
+
+      <!--- Start Right SideBar -->
+      {% if page.sidebar_second %}
+          <div class={{sidebarsecond}}>
+            {{ page.sidebar_second }}
+          </div>
+      {% endif %}
+      <!---End Right SideBar -->
+
+  </div>      
+</div>
+    <!--end container -->
+
+  <div class="footer text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          RealMedia Latin America © Copyright 2007 - {{ 'now'|date('Y') }}. All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </div>
